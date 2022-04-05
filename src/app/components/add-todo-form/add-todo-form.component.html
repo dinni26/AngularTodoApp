@@ -1,0 +1,24 @@
+<form>
+    <h3>{{ today | date: 'YYYY/MM/dd'}}</h3>
+
+    <div class = "input-group mb-3">
+        <input 
+        type="text"
+        name="inputTodo"
+        placeholder="Enter todo..."
+        class="form-control"
+        [(ngModel)]= "inputTodo"
+        />
+        
+        <input
+        type="submit"
+        value = "add Todo"
+        class=" btn btn-primary"
+        (click)="addTodo()"
+        />
+    
+    </div>
+
+    <p> {{message}} </p>
+    
+</form>
